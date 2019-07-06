@@ -310,7 +310,7 @@ void main()
 		printf("%d ", p[i]);
 }*/ //14번
 
-void main()
+/*void main()
 {
 	int n;
 	cin >> n;
@@ -329,4 +329,55 @@ void main()
 	}
 
 	printf("%d", num);
-}
+}*/ //15번
+
+/*void main()
+{
+	char str1[101];
+	char str2[101];
+	cin >> str1;
+	cin >> str2;
+	
+	int number1[100] = { 0 };
+	int number2[100] = { 0 };
+	if (strlen(str1) != strlen(str2))
+	{
+		printf("NO");
+		return;
+	}
+	else
+	{
+		for (int i = 0; i < strlen(str1); i++)
+		{
+			if (str1[i] >= 'A' && str1[i] <= 'Z')
+			{
+				number1[str1[i] - 'A']++;
+			}
+			else if (str1[i] >= 'a' && str1[i] <= 'z')
+			{
+				number1[str1[i] - 'a' + 'Z'-'A' + 1]++;
+			}
+		}
+		for (int i = 0; i < strlen(str2); i++)
+		{
+			if (str2[i] >= 'A' && str2[i] <= 'Z')
+			{
+				number2[str2[i] - 'A']++;
+			}
+			else if (str2[i] >= 'a' && str2[i] <= 'z')
+			{
+				number2[str2[i] - 'a' + 'Z'-'A' + 1]++;
+			}
+		}
+	}
+	
+	for (int i = 0; i < 100; i++)
+	{
+		if (number1[i] != number2[i])
+		{
+			printf("NO");
+			return;
+		}
+	}
+	printf("YES");
+}*/ // 16번문제 구글 인터뷰 문제 
