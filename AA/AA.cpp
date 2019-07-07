@@ -382,7 +382,7 @@ void main()
 	printf("YES");
 }*/ // 16번문제 구글 인터뷰 문제 
 
-void main()
+/*void main()
 {
 	int n;
 	int arr[10];
@@ -407,4 +407,31 @@ void main()
 		else
 			printf("NO\n");
 	}
-} // 17번 문제 
+}*/ // 17번 문제 
+
+
+void main()
+{
+	int n, m;
+	int arr[101];
+	cin >> n >> m;
+	int max = 0;
+	int num = 0;
+
+	for (int i = 0; i < n; i++)
+	{
+		cin >> arr[i];
+		if (arr[i] > m)
+			num++;
+		if (max < num)
+			max = num;
+		if(arr[i]<=m) {
+			num = 0;
+		}
+	}
+
+	if (max == 0)
+		printf("-1");
+	else
+		printf("%d", max);
+} // 18번 문제
