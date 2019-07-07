@@ -435,7 +435,7 @@ void main()
 		printf("%d", max);
 }*/  // 18번 문제
 
-void main()
+/*void main()
 {
 	int n;
 	cin >> n;
@@ -461,4 +461,38 @@ void main()
 	}
 	printf("%d", sum);
 
-} // 19번 문제
+}*/ // 19번 문제
+
+void main()
+{
+	int ch1[100];
+	int ch2[100];
+	int n;
+	cin >> n;
+
+	for (int i = 0; i < n; i++)
+	{
+		cin >> ch1[i];
+	}
+
+	for (int i = 0; i < n; i++)
+	{
+		cin >> ch2[i];
+	}
+
+	for (int i = 0; i < n; i++)
+	{
+		if ((ch1[i] - ch2[i] == -2) || (ch1[i]-ch2[i]==1))
+		{
+			printf("A\n");
+		}
+		else if (ch1[i] == ch2[i])
+		{
+			printf("D\n");
+		}
+		else
+		{
+			printf("B\n");
+		}
+	}
+}
