@@ -409,8 +409,7 @@ void main()
 	}
 }*/ // 17번 문제 
 
-
-void main()
+/*void main()
 {
 	int n, m;
 	int arr[101];
@@ -434,4 +433,32 @@ void main()
 		printf("-1");
 	else
 		printf("%d", max);
-} // 18번 문제
+}*/  // 18번 문제
+
+void main()
+{
+	int n;
+	cin >> n;
+	int arr[101];
+	
+	for (int i = 0; i < n; i++)
+		cin >> arr[i];
+	int sum = 0;
+	int flag = 0;
+	for (int i = 0; i < n; i++)
+	{
+		for (int j = i+1; j < n; j++)
+		{
+			if (arr[i] <= arr[j])
+			{
+				flag = 1;
+				break;
+			}
+		}
+		if (flag == 0 && i!=n-1)
+			sum++;
+		flag = 0;
+	}
+	printf("%d", sum);
+
+} // 19번 문제
