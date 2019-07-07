@@ -381,3 +381,30 @@ void main()
 	}
 	printf("YES");
 }*/ // 16번문제 구글 인터뷰 문제 
+
+void main()
+{
+	int n;
+	int arr[10];
+	cin >> n;
+	int a, b;
+	for (int i = 0; i < n; i++)
+	{
+		int sum = 0;
+		cin >> a >> b;
+		for (int i = 1; i <= a; i++)
+			sum += i;
+		if (sum == b)
+			arr[i] = 1;
+		else
+			arr[i] = 0;
+	}
+
+	for (int i = 0; i < n; i++)
+	{
+		if (arr[i])
+			printf("YES\n");
+		else
+			printf("NO\n");
+	}
+} // 17번 문제 
