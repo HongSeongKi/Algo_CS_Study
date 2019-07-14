@@ -7,6 +7,7 @@
 #include <stack>
 #include <string.h>
 #include <math.h>
+
 using namespace std;
 
 /*int main()
@@ -629,7 +630,7 @@ printf("%d", max);*/ //이중포문으로 풀면 시간초과
 	printf("%d", max);
 }*/ //23번
 
-int flag[101];
+/*int flag[101];
 void main()
 {
 	vector<int> v;
@@ -663,4 +664,40 @@ void main()
 		}
 	}
 	printf("YES");
-}
+}*/ //24번
+
+/*void main()
+{
+	priority_queue<pair<int,int>> pq;
+	int arr[100];
+	int n;
+	cin >> n;
+	
+	for (int i = 0; i < n; i++)
+	{
+		int a;
+		cin >> a;
+		pq.push(make_pair(a, i));
+	}
+	pair<int, int> p1, p2;
+	for (int i = 0; i < n; i++)
+	{
+		p1 = p2;
+		p2 = pq.top();
+		pq.pop();
+		if (i != 0)
+		{
+			if (p1.first != p2.first)
+				arr[p2.second] = i + 1;
+			else
+			{
+				arr[p2.second] = arr[p1.second];
+			}
+		}
+		else
+			arr[p2.second] = 1;
+	}
+
+	for (int i = 0; i < n; i++)
+		printf("%d ", arr[i]);
+}*/ //25번 추가
