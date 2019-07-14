@@ -555,7 +555,7 @@ void main()
 
 }*/ //21번 문제
 
-void main()
+/*void main()
 {
 	vector<int> v;
 	int n, k;
@@ -577,11 +577,10 @@ void main()
 		sum = sum + v[i] - v[i - k];
 		if (sum > max)
 			max = sum;
-	}
+	} // 이거 다시한번 보기
 
 	printf("%d", max);
-}
-
+}*/
 
 /*
 for (int i = 0; i < n; i++)
@@ -600,3 +599,31 @@ max = sum;
 }
 
 printf("%d", max);*/ //이중포문으로 풀면 시간초과
+//22번 문제
+
+/*void main()
+{
+	vector<int> v;
+	int n;
+	scanf("%d", &n);
+	for (int i = 0; i < n; i++)
+	{
+		int a;
+		cin >> a;
+		v.push_back(a);
+	}
+	int max = -10000;
+	for (int i = 0; i < v.size(); i++)
+	{
+		int len = 1;
+		for (int j = i; j < v.size() - 1; j++)
+		{
+			if (v[j] <= v[j + 1])
+				len++;
+			else break;
+		}
+		if (len > max)
+			max = len;
+	}
+	printf("%d", max);
+}*/ //23번
