@@ -497,7 +497,7 @@ void main()
 	}
 }*/ //20번 문제
 
-void main()
+/*void main()
 {
 	int A[10], B[10];
 	int asum = 0, bsum = 0;
@@ -553,4 +553,50 @@ void main()
 		}
 	}
 
+}*/ //21번 문제
+
+void main()
+{
+	vector<int> v;
+	int n, k;
+	cin >> n >> k;
+		
+	for (int i = 0; i < n; i++)
+	{
+		int a;
+		cin >> a;
+		v.push_back(a);
+	}
+	int sum = 0;
+	for (int i = 0; i < k; i++)
+		sum += v[i];
+	int max = sum;
+	
+	for (int i = k; i < n; i++)
+	{
+		sum = sum + v[i] - v[i - k];
+		if (sum > max)
+			max = sum;
+	}
+
+	printf("%d", max);
 }
+
+
+/*
+for (int i = 0; i < n; i++)
+{
+int sum = 0;
+int flag = 0;
+for (int j = i; j < n; j++)
+{
+flag++;
+sum += v[j];
+if (flag == k)
+break;
+}
+if (flag == k && sum > max)
+max = sum;
+}
+
+printf("%d", max);*/ //이중포문으로 풀면 시간초과
