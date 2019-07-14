@@ -463,7 +463,7 @@ void main()
 
 }*/ // 19번 문제
 
-void main()
+/*void main()
 {
 	int ch1[100];
 	int ch2[100];
@@ -495,4 +495,62 @@ void main()
 			printf("B\n");
 		}
 	}
+}*/ //20번 문제
+
+void main()
+{
+	int A[10], B[10];
+	int asum = 0, bsum = 0;
+
+	for (int i = 0; i < 10; i++)
+		cin >> A[i];
+	for (int i = 0; i < 10; i++)
+		cin >> B[i];
+
+	for (int i = 0; i < 10; i++)
+	{
+		if (A[i] > B[i])
+			asum += 3;
+		else if (A[i] == B[i])
+		{
+			asum++;
+			bsum++;
+		}
+		else
+			bsum += 3;
+
+		if (i == 9)
+		{
+			printf("%d %d\n", asum, bsum);
+			if (asum > bsum)
+				printf("A");
+			else if (asum == bsum)
+			{
+				if (A[9] > B[9])
+					printf("A");
+				else if (B[9] > A[9])
+					printf("B");
+				else
+				{
+					for (int i = 8; i >= 0; i--)
+					{
+						if (A[i] > B[i])
+						{
+							printf("A");
+							return;
+						}
+						else if (B[i] > A[i])
+						{
+							printf("B");
+							return;
+						}
+					}
+					printf("D");
+				}
+			}
+			else
+				printf("B");
+		}
+	}
+
 }
