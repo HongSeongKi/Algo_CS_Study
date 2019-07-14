@@ -6,6 +6,7 @@
 #include <queue>
 #include <stack>
 #include <string.h>
+#include <math.h>
 using namespace std;
 
 /*int main()
@@ -627,3 +628,39 @@ printf("%d", max);*/ //이중포문으로 풀면 시간초과
 	}
 	printf("%d", max);
 }*/ //23번
+
+int flag[101];
+void main()
+{
+	vector<int> v;
+	int n;
+	cin >> n;
+	
+	for (int i = 0; i < n; i++)
+	{
+		int a;
+		cin >> a;
+		v.push_back(a);
+	}
+
+	for (int i = 0; i < n - 1; i++)
+	{
+		int k = abs(v[i] - v[i + 1]);
+		if (k >= 0 && k <= n - 1)
+		{
+			if (flag[k] == 0)
+				flag[k] = 1;
+			else
+			{
+				printf("NO");
+				return;
+			}
+		}
+		else
+		{
+			printf("NO");
+			return;
+		}
+	}
+	printf("YES");
+}
