@@ -701,3 +701,31 @@ void main()
 	for (int i = 0; i < n; i++)
 		printf("%d ", arr[i]);
 }*/ //25번 추가
+
+/*void main()
+{
+	vector<int> v;
+	int arr[10001];
+	int n;
+	cin >> n;
+	for (int i = 0; i < n; i++)
+	{
+		int a;
+		cin >> a;
+		v.push_back(a);
+	}
+	for (int i = 0; i < n; i++)
+	{
+		int sum = i;
+		for (int j = i - 1; j >= 0; j--)
+		{
+			if (v[i] > v[j])
+				sum--;
+		}
+		arr[i] = sum + 1;
+	}
+	for (int i = 0; i < n; i++)
+		printf("%d ", arr[i]);
+} 26번*/
+  //시간복잡도 n제곱이 나옴
+  //stable한 merge sort를 사용해야한다...
