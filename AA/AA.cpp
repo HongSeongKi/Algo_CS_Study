@@ -7,6 +7,8 @@
 #include <stack>
 #include <string.h>
 #include <math.h>
+#include <string>
+#include <set>
 
 using namespace std;
 
@@ -730,14 +732,7 @@ void main()
   //시간복잡도 n제곱이 나옴
   //stable한 merge sort를 사용해야한다...
 
-#include <stdio.h>
-#include <algorithm>
-#include <iostream>
-#include <stdlib.h>
-#include <vector>
-#include <string>
-#include <set>
-using namespace std;
+
 //int flag[1000];
 
 /*int isPrime(int n)
